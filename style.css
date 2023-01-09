@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Markazi Text";
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+  background-color: #94a6ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2.5rem;
+  padding: 3rem;
+  /* position: relative; */
+}
+
+.title {
+  background-color: #f4f5f1;
+  border: 0.5px solid #02080a;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  /* position: absolute; */
+  font-weight: 400;
+
+  padding: 0.8rem;
+}
+
+form {
+  padding: 2.5rem;
+  min-height: 10rem;
+  background-color: #f4f5f1;
+  border: 0.5px solid #02080a;
+  border-radius: 10px;
+}
+form input {
+  width: 20rem;
+  border-radius: 10px;
+  outline: none;
+  padding: 1.5rem;
+}
+
+form button {
+  padding: 1.5rem 2.5rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #19a192;
+  color: #f4f5f1;
+  cursor: pointer;
+}
+
+#box-tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-tasks {
+  list-style: none;
+}
+
+.task {
+  max-width: 48rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcec80;
+  padding: 0.8rem 1.8rem;
+  gap: 0.8rem;
+  border-radius: 8px;
+  border: 0.5px solid #02080a;
+  margin: 0.8rem;
+  font-size: 2.2rem;
+}
+
+.task-item {
+  flex: 1;
+  margin-left: 0.8rem;
+}
+
+.delete-btn {
+  margin-right: 3px;
+}
+.checked {
+  /* text-decoration: line-through; */
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#box-tasks input {
+  display: none;
+}
+#box-tasks label {
+  display: block;
+}
+.checkbox {
+  /* margin-right: 5px; */
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #3b3b3b;
+  border-radius: 2px;
+  transition: 0.375s;
+  cursor: pointer;
+}
+
+#box-tasks input:checked ~ .checkbox {
+  rotate: 45deg;
+  translate: 5px -5px;
+  width: 1rem;
+  border-color: #19a192;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 425px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
